@@ -1,0 +1,209 @@
+@import "../../scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap'); /*font-family: 'Sintony', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap'); /*font-family: 'Playfair Display', serif;*/
+
+/*Variable*/
+$ff1: 'Sintony', sans-serif;
+$ff2: 'Playfair Display', serif;
+$xl-screen: 1200px;
+$l-screen: 992px;
+$m-screen: 768px;
+$s-screen: 576px;
+$xs-screen: 380px;
+$color-yellow: #fea100;
+$color-black: #14141d;
+$color-dark-blue: #2c465a;
+$color-light-grey: #e1e1e1;
+
+//Style files
+@import "header.scss";
+@import "footer.scss";
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Sintony', sans-serif;
+    color: #5c6369;
+}
+
+ul, li {
+	display: block;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff2;
+    font-weight: 700;
+    color: #14141d;
+}
+
+p {
+	line-height: 1.86em;
+}
+
+.call {
+	background-color: #edf1f3;
+	border-bottom: 1px solid #dde3e7;
+	padding: 30px 0;
+	text-align: center;
+	color: $color-black;
+
+	@include media-breakpoint-down(sm) {
+		padding: 15px 0;
+	}
+}
+
+.phone__text {
+	background: url(../img/phone.png) no-repeat left center;	
+	line-height: 1.43em;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding-left: 56px;
+	
+	& span {
+		color: $color-yellow;
+		font-size: 16px;
+		display: block;
+	}
+
+}
+
+.phone__digits {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: $ff2;
+	font-size: 32px;
+	margin-left: 42px;
+}
+
+.about {
+	padding: 65px 0 100px;
+
+	@include media-breakpoint-down(md) {
+		padding: 50px 0 50px;
+	}
+}
+
+.history {
+	margin-top:calc(116px - 65px);
+
+	@include media-breakpoint-down(md) {
+		margin-top: 0;
+	}
+}
+
+.history__title {
+	font-size: 35px;
+}
+
+.history__text {
+	margin: 40px 0 0 0;
+}
+
+.history__btn {
+	margin-top: 50px;
+	width: 148px;
+}
+
+.food-images { 
+	@include media-breakpoint-down(md) {
+		display: flex;	
+	}
+	@include media-breakpoint-down(sm) {
+		display: block;
+		width: 70%;
+	}
+}
+
+.food-images-down {
+	margin-top:calc(116px - 65px);
+		
+}
+
+.food-images__item {
+	margin-bottom: 10px;
+	width: 100%;
+
+	@include media-breakpoint-down(md) {
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.special {
+	background: url(../img/third-bg.jpg) no-repeat center top;
+	padding-top: 80px;
+}
+
+.special-title {
+	font-size: 35px;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+}
+
+.food-card {
+	text-align: center;
+	box-shadow: 0px 24px 38px 0 rgba(0, 0, 0, 0.09);
+	margin: 25px 0 128px;
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 50px;
+	}
+}
+
+.food-card__title {
+	font-size: 26px;
+	margin-top: 50px;
+}
+
+.food-card__desk {
+	margin-top: 20px;
+	padding: 0 60px;
+}
+
+.food-card__details {
+	font-weight: 700;
+	border-top: 1px solid $color-light-grey;
+	margin: 0 45px;
+	text-align: left;
+	padding: 17px 0 30px;
+}
+
+.food-card__del {
+	text-transform: uppercase;
+	font-size: 13px;
+	color: $color-black;
+	border-right: 1px solid $color-light-grey;
+	width: 78px;
+	margin-right: 18px;
+
+	& span {
+		color: #fe4c8d;
+		display: block;
+	}
+}
+
+.food-card__phone {
+	font-size: 26px;
+	color: $color-black;
+	font-family: $ff2;
+}
+
+.food-card__price {
+	color: $color-yellow;
+	font-size: 30px;
+	font-family: $ff2;
+}
